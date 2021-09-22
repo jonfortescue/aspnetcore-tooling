@@ -123,30 +123,32 @@
       NOTE: Adding OSS components to this list must be reviewed against our component governance standards. For now this is a curated list. You can read more about the CG process at https://aka.ms/component-governance
     ***************************************************************************************************************************************
     -->
-    <VSIXSourceItem Include="$(OutputPath)MediatR.dll" />
-    <VSIXSourceItem Include="$(OutputPath)OmniSharp.Extensions.JsonRpc.dll" />
-    <VSIXSourceItem Include="$(OutputPath)OmniSharp.Extensions.LanguageProtocol.dll" />
-    <VSIXSourceItem Include="$(OutputPath)OmniSharp.Extensions.LanguageServer.dll" />
-    <VSIXSourceItem Include="$(OutputPath)OmniSharp.Extensions.LanguageServer.Shared.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Options.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Primitives.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.DependencyInjection.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Configuration.Json.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Configuration.FileExtensions.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Configuration.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Configuration.Abstractions.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Logging.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.Logging.Abstractions.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.FileSystemGlobbing.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.FileProviders.Abstractions.dll" />
-    <VSIXSourceItem Include="$(OutputPath)Microsoft.Extensions.FileProviders.Physical.dll" />
+    <OmniSharpDependency Include="$(OutputPath)MediatR.dll" />
+    <OmniSharpDependency Include="$(OutputPath)OmniSharp.Extensions.JsonRpc.dll" />
+    <OmniSharpDependency Include="$(OutputPath)OmniSharp.Extensions.LanguageProtocol.dll" />
+    <OmniSharpDependency Include="$(OutputPath)OmniSharp.Extensions.LanguageServer.dll" />
+    <OmniSharpDependency Include="$(OutputPath)OmniSharp.Extensions.LanguageServer.Shared.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Options.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Primitives.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.DependencyInjection.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Configuration.Json.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Configuration.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Logging.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.Logging.Abstractions.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <OmniSharpDependency Include="$(OutputPath)Microsoft.Extensions.FileProviders.Physical.dll" />
+    <OmniSharpDependency Include="$(OutputPath)System.IO.Pipelines.dll" />
+    <OmniSharpDependency Include="$(OutputPath)System.Reactive.dll" />
+    <OmniSharpDependency Include="$(OutputPath)System.Threading.Channels.dll" />
+
+    <RazorNgendVSIXSourceItem Include="@(OmniSharpDependency)" />
     <VSIXSourceItem Include="$(OutputPath)Microsoft.VisualStudio.LanguageServer.Protocol.dll" />
     <VSIXSourceItem Include="$(OutputPath)Microsoft.VisualStudio.LanguageServer.Protocol.Extensions.dll" />
     <VSIXSourceItem Include="$(OutputPath)Microsoft.VisualStudio.LanguageServer.Protocol.Internal.dll" />
-    <VSIXSourceItem Include="$(OutputPath)System.IO.Pipelines.dll" />
-    <VSIXSourceItem Include="$(OutputPath)System.Reactive.dll" />
-    <VSIXSourceItem Include="$(OutputPath)System.Threading.Channels.dll" />
   </ItemGroup>
 
   <!-- Resources are a little bit special in a VSIX -->
